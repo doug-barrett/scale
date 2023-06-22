@@ -1,0 +1,160 @@
+steps:
+  V_CUSTOMER_07_0806-e679fb43-5ee0-4a51-9daf-d812921f9e8b:
+    operation:
+      config:
+        insertStrategy: UNION
+        selectDistinct: false
+      database: ""
+      deployEnabled: true
+      description: ""
+      isDataVault: false
+      isMultisource: false
+      locationName: DWH
+      materializationType: view
+      metadata:
+        appliedNodeTests: []
+        columns:
+          - columnReference:
+              columnCounter: 2fd48f00-afc6-4074-8735-6f5c50fc5feb
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_CUSTKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 85824d19-dc07-40ec-a2f1-35fb4c029826
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+          - columnReference:
+              columnCounter: 79a58c6a-c355-4908-bfc9-6320568bdb70
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: VARCHAR(25)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NAME
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: a0bbb6cb-e852-4c6c-af08-32b491f8d5a3
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+          - columnReference:
+              columnCounter: b545a68f-c193-453d-8c72-8ad4e3294ac1
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: VARCHAR(40)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ADDRESS
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 7132e5c1-9287-451a-b5e6-75ce0f78350e
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+          - columnReference:
+              columnCounter: 71577187-aaf2-4193-8623-7bd8ab938f7f
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: NUMBER(38,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_NATIONKEY
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 25aeb339-83cd-4dd5-a8ca-cf482c90a1fc
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+          - columnReference:
+              columnCounter: 154c2a8b-9551-4821-b754-05c90ac209d4
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: VARCHAR(15)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_PHONE
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 6575913d-d885-4a49-8ab7-024d2956a9a4
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+          - columnReference:
+              columnCounter: c00ff3e2-b20f-4853-9007-ef711b97430d
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: NUMBER(12,2)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_ACCTBAL
+            nullable: false
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 62161185-637c-4ba6-b527-ae5abca5d148
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+          - columnReference:
+              columnCounter: b435b51a-fffd-4c15-891f-8e72767dc28b
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: VARCHAR(10)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_MKTSEGMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: c8b73f72-83da-4b14-894c-96a3021d9974
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+          - columnReference:
+              columnCounter: 2ea0ae0c-01f6-4c82-92b7-17e11330cda3
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: VARCHAR(117)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: C_COMMENT
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: 3c37372a-9307-4c0d-b968-bbcc218a3ab2
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+          - columnReference:
+              columnCounter: 6d4d78b0-50e1-4a3d-ba64-c6c9f9ed5279
+              stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
+            dataType: NUMBER(3,0)
+            description: ""
+            hashColumns: []
+            hashDetails: null
+            name: SRC
+            nullable: true
+            sourceColumnReferences:
+              - columnReferences:
+                  - columnCounter: eaf5b2c1-017f-455e-857a-76d3b4b5f3cf
+                    stepCounter: afbb11eb-c7e8-4e8a-87be-e2352a1fc889
+                transform: ""
+        cteString: ""
+        enabledColumnTestIDs: []
+        sourceMapping:
+          - customSQL:
+              customSQL: ""
+            dependencies:
+              - locationName: STAGE
+                nodeName: STG_CUSTOMER_07_0806
+            join:
+              joinCondition: FROM {{ ref('STAGE', 'STG_CUSTOMER_07_0806') }} "STG_CUSTOMER_07_0806"
+            name: V_CUSTOMER_07_0806
+            noLinkRefs: []
+      name: V_CUSTOMER_07_0806
+      overrideSQL: false
+      schema: ""
+      sqlType: View
+      type: sql
+    stepCounter: e679fb43-5ee0-4a51-9daf-d812921f9e8b
